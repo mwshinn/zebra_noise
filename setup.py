@@ -1,8 +1,5 @@
 import sys
-try:
-    from setuptools import setup, Extension
-except ImportError:
-    from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 import numpy as np
 
@@ -30,11 +27,19 @@ setup(
         'Development Status :: 4 - Beta',
         'Programming Language :: C',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
+        'Programming Language :: Python :: 3.14',
+        'Programming Language :: Python :: 3.15',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Topic :: Multimedia :: Graphics',
         'Topic :: Scientific/Engineering',
     ],
+    python_requires='>=3.9',
     install_requires = ['numpy', 'imageio', 'imageio-ffmpeg', 'tqdm'],
     packages=['zebranoise'],
     ext_modules=[
